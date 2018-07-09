@@ -2,12 +2,9 @@ package com.hknmt.springboothibernate.springboothibernate.dao;
 
 import com.hknmt.springboothibernate.springboothibernate.Utils.HibernateUtil;
 import com.hknmt.springboothibernate.springboothibernate.entities.Employee;
-import com.sun.xml.internal.ws.api.model.wsdl.editable.EditableWSDLMessage;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
-import org.hibernate.transform.Transformers;
-import org.springframework.cglib.core.Transformer;
 import org.springframework.stereotype.Repository;
 
 @Repository
