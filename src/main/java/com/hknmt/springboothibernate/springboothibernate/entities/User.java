@@ -1,23 +1,31 @@
 package com.hknmt.springboothibernate.springboothibernate.entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-@Table(name = "USER")
-public class User {
+@Table(name = "USERMAIN")
+public class User implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int user_id = 0;
+    @Column(name = "USERID")
+    private int user_id;
+
     @Column(name = "USERNAME")
     private String userName;
+
     @Column(name = "PASSWORD")
     private String passWord;
+
     @Column(name = "ROLE")
     private int role;
+
     public User() {
 
     }
-    public User(String userName, String passWord, int role) {
+    public User(int user_id, String userName, String passWord, int role) {
+        this.user_id = user_id;
         this.userName = userName;
         this.passWord = passWord;
         this.role = role;
